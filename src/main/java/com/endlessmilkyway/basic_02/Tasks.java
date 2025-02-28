@@ -2,6 +2,7 @@ package com.endlessmilkyway.basic_02;
 
 import com.endlessmilkyway.basic_02.view.InputView;
 import com.endlessmilkyway.basic_02.view.OutputView;
+import java.util.Arrays;
 import java.util.List;
 
 public class Tasks {
@@ -28,6 +29,7 @@ public class Tasks {
     // 출력 : 직사각형의 넓이
     public void task2() {
         List<Integer> inputs = inputView.getRectangleMeasurementFromConsole();
+
         outputView.printExtent(inputs.get(0) * inputs.get(1));
     }
 
@@ -47,7 +49,10 @@ public class Tasks {
     // 입력 : 5개의 정수
     // 출력 : 정렬된 결과
     public void task4() {
+        int[] inputs = inputView.getFiveDigitsFromConsole();
+        Arrays.sort(inputs);
 
+        outputView.printArrayElems(inputs);
     }
 
     // 태스크5. 1부터 10까지의 숫자 배열 출력하기
