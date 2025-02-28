@@ -1,9 +1,12 @@
 package com.endlessmilkyway.basic_02;
 
+import com.endlessmilkyway.basic_02.view.InputView;
 import com.endlessmilkyway.basic_02.view.OutputView;
+import java.util.List;
 
 public class Tasks {
 
+    private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
     private final ArrayManager arrayManager = new ArrayManager();
 
@@ -24,7 +27,8 @@ public class Tasks {
     // 입력 : 직사각형의 가로 길이, 직사각형의 세로 길이 (2개)
     // 출력 : 직사각형의 넓이
     public void task2() {
-
+        List<Integer> inputs = inputView.getRectangleMeasurementFromConsole();
+        outputView.printExtent(inputs.get(0) * inputs.get(1));
     }
 
     // 태스크3. 두 개의 정수를 더하고 빼는 메서드 작성하기

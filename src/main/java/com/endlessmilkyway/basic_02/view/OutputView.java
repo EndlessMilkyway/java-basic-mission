@@ -12,4 +12,8 @@ public class OutputView {
     public void printAvgVal(int avgVal) {
         System.out.println(Messages.AVG_RESULT_MSG.getMessage() + avgVal);
     }
+
+    public void printExtent(int extent) {
+        System.out.println(Messages.EXTENT_RESULT_MSG.getMessage() + extent);
+    }
 }
