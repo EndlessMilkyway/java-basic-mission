@@ -61,7 +61,9 @@ public class Tasks {
     // 입력 : 없음
     // 출력 : 1부터 10까지 총 10개의 숫자가 저장된 배열
     public void task5() {
+        int[] arr = arrayManager.createTenLengthArray();
 
+        outputView.printArrayElems(arr);
     }
 
     // 태스크6. 홀수/짝수 판별 프로그램 작성하기

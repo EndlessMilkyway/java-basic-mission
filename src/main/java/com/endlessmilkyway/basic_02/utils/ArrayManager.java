@@ -18,6 +18,15 @@ public class ArrayManager {
         return randArr;
     }
 
+    public int[] createTenLengthArray() {
+        int[] arr = new int[ARRAY_LENGTH];
+        for (int i = FIRST_INDEX; i < ARRAY_LENGTH; i++) {
+            arr[i] = i + 1;
+        }
+
+        return arr;
+    }
+
     public int calcAvgFromValues(int[] arr) {
         int sum = 0;
         for (int num : arr) {
