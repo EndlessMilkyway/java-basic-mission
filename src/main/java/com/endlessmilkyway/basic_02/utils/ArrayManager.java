@@ -1,4 +1,4 @@
-package com.endlessmilkyway.basic_02;
+package com.endlessmilkyway.basic_02.utils;
 
 import java.util.Random;
 

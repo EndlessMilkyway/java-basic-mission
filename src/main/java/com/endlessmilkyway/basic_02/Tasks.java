@@ -1,5 +1,7 @@
 package com.endlessmilkyway.basic_02;
 
+import com.endlessmilkyway.basic_02.utils.ArrayManager;
+import com.endlessmilkyway.basic_02.utils.Calculator;
 import com.endlessmilkyway.basic_02.view.InputView;
 import com.endlessmilkyway.basic_02.view.OutputView;
 import java.util.Arrays;
