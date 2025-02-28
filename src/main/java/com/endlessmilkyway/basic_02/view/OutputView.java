@@ -10,10 +10,15 @@ public class OutputView {
     }
 
     public void printAvgVal(int avgVal) {
-        System.out.println(Messages.AVG_RESULT_MSG.getMessage() + avgVal);
+        System.out.println(Messages.AVG_RESULT.getMessage() + avgVal);
     }
 
     public void printExtent(int extent) {
-        System.out.println(Messages.EXTENT_RESULT_MSG.getMessage() + extent);
+        System.out.println(Messages.EXTENT_RESULT.getMessage() + extent);
+    }
+
+    public void printBasicOperationsResult(int added, int subtracted) {
+        System.out.println("덧셈 결과 : " + added);
+        System.out.println("뺄셈 결과 : " + subtracted);
     }
 }

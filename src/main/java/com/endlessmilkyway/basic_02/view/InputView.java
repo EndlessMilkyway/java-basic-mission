@@ -9,13 +9,13 @@ import java.util.List;
 
 public class InputView {
 
-    public List<Integer> getTwoDigitsFromConsole(Messages msg1, Messages msg2) {
+    public List<Integer> processTwoDigitsFromConsole(Messages msg1, Messages msg2) {
         List<Integer> inputs = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             System.out.print(msg1.getMessage());
             inputs.add(Integer.parseInt(br.readLine()));
-            System.out.println(msg2.getMessage());
+            System.out.print(msg2.getMessage());
             inputs.add(Integer.parseInt(br.readLine()));
         } catch (IOException e) {
             throw new IllegalArgumentException("입력이 잘못되었습니다!");
@@ -24,7 +24,11 @@ public class InputView {
         return inputs;
     }
 
+    public List<Integer> getTwoDigitsFromConsole() {
+        return processTwoDigitsFromConsole(Messages.INPUT_FIRST_DIGIT, Messages.INPUT_SECOND_DIGIT);
+    }
+
     public List<Integer> getRectangleMeasurementFromConsole() {
-        return getTwoDigitsFromConsole(Messages.INPUT_RECTANGLE_WIDTH, Messages.INPUT_RECTANGLE_HEIGHT);
+        return processTwoDigitsFromConsole(Messages.INPUT_RECTANGLE_WIDTH, Messages.INPUT_RECTANGLE_HEIGHT);
     }
 }

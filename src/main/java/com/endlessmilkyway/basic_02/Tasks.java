@@ -35,7 +35,12 @@ public class Tasks {
     // 입력 : 정수 2개
     // 출력 : 2개의 정수를 더한 결과, 2개의 정수를 뺀 결과
     public void task3() {
+        List<Integer> inputs = inputView.getTwoDigitsFromConsole();
+        Calculator calculator = new Calculator();
+        int added = calculator.add(inputs.get(0), inputs.get(1));
+        int subtracted = calculator.subtract(inputs.get(0), inputs.get(1));
 
+        outputView.printBasicOperationsResult(added, subtracted);
     }
 
     // 태스크4. 5개의 정수 오름차순 정렬하기
