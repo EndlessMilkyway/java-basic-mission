@@ -1,9 +1,10 @@
 package com.endlessmilkyway.basic_02;
 
-import java.util.Arrays;
+import com.endlessmilkyway.basic_02.view.OutputView;
 
 public class Tasks {
 
+    private final OutputView outputView = new OutputView();
     private final ArrayManager arrayManager = new ArrayManager();
 
     // 태스크1. 배열의 평균을 계산하고 배열 요소를 변경하는 메서드 작성하기
@@ -11,13 +12,12 @@ public class Tasks {
     // 출력 : 배열에 저장된 숫자의 평균, 요소 변경이 반영된 배열
     public void task1() {
         int[] randArray = arrayManager.createRandArray();
-        System.out.println(Arrays.toString(randArray));
+        outputView.printArrayElems(randArray);
 
-        int avgVal = arrayManager.calcAvgFromValues(randArray);
-        System.out.println("평균 값 : " + avgVal);
+        outputView.printAvgVal(arrayManager.calcAvgFromValues(randArray));
 
         arrayManager.changeArrayElement(randArray, 10, 9999);
-        System.out.println(Arrays.toString(randArray));
+        outputView.printArrayElems(randArray);
     }
 
     // 태스크2. 사용자로부터 직사각형의 가로와 세로를 입력받아 넓이 출력하기
