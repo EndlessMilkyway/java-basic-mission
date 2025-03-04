@@ -9,6 +9,9 @@ import java.util.List;
 
 public class Tasks {
 
+    private static final int FIRST_ELEM = 0;
+    private static final int SECOND_ELEM = 1;
+
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
     private final ArrayManager arrayManager = new ArrayManager();
@@ -32,7 +35,7 @@ public class Tasks {
     public void task2() {
         List<Integer> inputs = inputView.getRectangleMeasurementFromConsole();
 
-        outputView.printExtent(inputs.get(0) * inputs.get(1));
+        outputView.printExtent(inputs.get(FIRST_ELEM) * inputs.get(SECOND_ELEM));
     }
 
     // 태스크3. 두 개의 정수를 더하고 빼는 메서드 작성하기
@@ -41,8 +44,8 @@ public class Tasks {
     public void task3() {
         List<Integer> inputs = inputView.getTwoDigitsFromConsole();
         Calculator calculator = new Calculator();
-        int added = calculator.add(inputs.get(0), inputs.get(1));
-        int subtracted = calculator.subtract(inputs.get(0), inputs.get(1));
+        int added = calculator.add(inputs.get(FIRST_ELEM), inputs.get(SECOND_ELEM));
+        int subtracted = calculator.subtract(inputs.get(FIRST_ELEM), inputs.get(SECOND_ELEM));
 
         outputView.printBasicOperationsResult(added, subtracted);
     }
@@ -70,6 +73,11 @@ public class Tasks {
     // 입력 : 정수 1개
     // 출력 : 판별 결과
     public void task6() {
+        int input = inputView.getSingleDigitFromConsole();
 
+        Calculator calculator = new Calculator();
+        String result = calculator.inspectEvenAndOdd(input);
+
+        outputView.printEvenOrOdd(result);
     }
 }

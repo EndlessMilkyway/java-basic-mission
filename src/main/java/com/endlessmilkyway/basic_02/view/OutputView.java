@@ -21,4 +21,8 @@ public class OutputView {
         System.out.println("덧셈 결과 : " + added);
         System.out.println("뺄셈 결과 : " + subtracted);
     }
+
+    public void printEvenOrOdd(String result) {
+        System.out.printf("해당 숫자는 %s 입니다.", result);
+    }
 }

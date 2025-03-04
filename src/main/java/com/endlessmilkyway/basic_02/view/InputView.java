@@ -51,4 +51,18 @@ public class InputView {
 
         return inputs;
     }
+
+    public int getSingleDigitFromConsole() {
+        int input;
+
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print(Messages.INPUT_NUMBER.getMessage());
+            input = Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            throw new IllegalArgumentException("입력이 잘못되었습니다!");
+        }
+
+        return input;
+    }
 }
