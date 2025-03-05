@@ -10,7 +10,8 @@ public enum Messages {
     AVG_RESULT("평균 값 : "),
     EXTENT_RESULT("넓이 : "),
     ADD_RESULT("덧셈 결과 : "),
-    SUBTRACT_RESULT("뺄셈 결과 : ");
+    SUBTRACT_RESULT("뺄셈 결과 : "),
+    EVEN_OR_ODD("해당 숫자는 %s 입니다.");
 
     private final String message;
 

@@ -18,11 +18,11 @@ public class OutputView {
     }
 
     public void printBasicOperationsResult(int added, int subtracted) {
-        System.out.println("덧셈 결과 : " + added);
-        System.out.println("뺄셈 결과 : " + subtracted);
+        System.out.println(Messages.ADD_RESULT.getMessage() + added);
+        System.out.println(Messages.SUBTRACT_RESULT.getMessage() + subtracted);
     }
 
     public void printEvenOrOdd(String result) {
-        System.out.printf("해당 숫자는 %s 입니다.", result);
+        System.out.printf(Messages.EVEN_OR_ODD.getMessage(), result);
     }
 }
