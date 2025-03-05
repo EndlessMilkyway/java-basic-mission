@@ -43,7 +43,7 @@ public class Tasks {
     // 출력 : 2개의 정수를 더한 결과, 2개의 정수를 뺀 결과
     public void task3() {
         List<Integer> inputs = inputView.getTwoDigitsFromConsole();
-        Calculator calculator = new Calculator();
+        Calculator calculator = Calculator.getInstance();
         int added = calculator.add(inputs.get(FIRST_ELEM), inputs.get(SECOND_ELEM));
         int subtracted = calculator.subtract(inputs.get(FIRST_ELEM), inputs.get(SECOND_ELEM));
 
@@ -75,7 +75,7 @@ public class Tasks {
     public void task6() {
         int input = inputView.getSingleDigitFromConsole();
 
-        Calculator calculator = new Calculator();
+        Calculator calculator = Calculator.getInstance();
         String result = calculator.inspectEvenAndOdd(input);
 
         outputView.printEvenOrOdd(result);

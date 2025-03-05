@@ -2,6 +2,18 @@ package com.endlessmilkyway.basic_02.utils;
 
 public class Calculator {
 
+    private static Calculator calculator;
+
+    private Calculator() {
+    }
+
+    public static Calculator getInstance() {
+        if (calculator == null) {
+            return new Calculator();
+        }
+        return calculator;
+    }
+
     private static final int EVEN_DETECT_NUM = 2;
     private static final int REMAIN_NUM_FOR_EVEN = 0;
 
